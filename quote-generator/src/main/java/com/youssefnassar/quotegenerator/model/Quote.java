@@ -15,6 +15,16 @@ public class Quote
    private int id;
    private String quote;
 
+   public Quote()
+   {
+   }
+
+   public Quote(final int id, final String quote)
+   {
+      this.id = id;
+      this.quote = quote;
+   }
+
    public String getQuote()
    {
       return quote;
