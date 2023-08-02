@@ -22,6 +22,6 @@ public class DBQuoteDAO implements IQuoteDAO
    @Override
    public Quote getQuote()
    {
-      return this.quoteRepository.findOne(ThreadLocalRandom.current().nextInt(1, 10094 + 1));
+      return this.quoteRepository.findOne(ThreadLocalRandom.current().nextInt(1, 8541 + 1));
    }
 }
