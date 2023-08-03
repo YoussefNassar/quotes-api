@@ -14,15 +14,17 @@ public class Quote
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private int id;
    private String quote;
+   private String author;
 
    public Quote()
    {
    }
 
-   public Quote(final int id, final String quote)
+   public Quote(final int id, final String quote, final String author)
    {
       this.id = id;
       this.quote = quote;
+      this.author = author;
    }
 
    public String getQuote()
@@ -33,5 +35,15 @@ public class Quote
    public void setQuote(final String quote)
    {
       this.quote = quote;
+   }
+
+   public String getAuthor()
+   {
+      return author;
+   }
+
+   public void setAuthor(final String author)
+   {
+      this.author = author;
    }
 }
