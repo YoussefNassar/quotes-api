@@ -11,7 +11,7 @@ import com.youssefnassar.quotegenerator.dao.IQuoteDAO;
 import com.youssefnassar.quotegenerator.model.Quote;
 
 @RestController
-@RequestMapping(value = "/")
+@RequestMapping
 public class QuoteController
 {
    final IQuoteDAO quoteDAO;
@@ -22,7 +22,7 @@ public class QuoteController
       this.quoteDAO = quoteDAO;
    }
 
-   @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+   @GetMapping(value = "/quote", produces = { MediaType.APPLICATION_JSON_VALUE })
    @CrossOrigin(origins = "http://localhost:3000")
    public Quote getQuote()
    {
